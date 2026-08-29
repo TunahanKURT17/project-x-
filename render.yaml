@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: vakit-diyanet
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DIYANET_EMAIL
+        sync: false
+      - key: DIYANET_PASSWORD
+        sync: false
